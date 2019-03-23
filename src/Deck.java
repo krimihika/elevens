@@ -32,8 +32,6 @@ public class Deck {
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		
-		
 			for(int i = 0 ; i<ranks.length ; i++) {
 				for (int j = 0; j <suits.length ; j++) {
 					Card c = new Card(ranks[i],suits[j],values[i]);
@@ -42,6 +40,7 @@ public class Deck {
 			}
 		
 		this.size = cards.size();
+		shuffle();
 	}
 
 
@@ -50,7 +49,9 @@ public class Deck {
 	 * @return true if this deck is empty, false otherwise.
 	 */
 	public boolean isEmpty() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		if(this.size == 0) {
+			return true;
+		}
 		return false;
 	}
 
@@ -60,7 +61,7 @@ public class Deck {
 	 */
 	public int size() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		return 0;
+		return this.size;
 	}
 
 	/**
