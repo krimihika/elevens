@@ -79,6 +79,10 @@ public class Deck {
 	 */
 	public Card deal() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		if(!isEmpty()) {
+			int num = (int) Math.random()*size() + 1;
+			//return cards<num>;
+		}
 		return new Card("ace", "spades", 0);
 	}
 
