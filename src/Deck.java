@@ -79,11 +79,13 @@ public class Deck {
 	 */
 	public Card deal() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		
 		if(!isEmpty()) {
-			int num = (int) Math.random()*size() + 1;
-			//return cards<num>;
+			Card c = cards.get(cards.size()-1);
+			this.size -- ;
+			return c;
 		}
-		return new Card("ace", "spades", 0);
+		return null;
 	}
 
 	/**
